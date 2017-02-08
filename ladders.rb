@@ -4,13 +4,13 @@ class Ladders
 
   def initialize (start, finish)
     @start = start
-    @end = finish
+    @finish = finish
   end
 
 
-  def climb(ladder)
-    if @player.position == ladder.start
-    return @player.position = ladder.finish
+  def climb(ladder, player)
+    if player.position == ladder.start
+    return player.position = ladder.finish
     else return
     end
   end

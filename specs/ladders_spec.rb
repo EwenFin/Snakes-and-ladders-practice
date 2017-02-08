@@ -6,7 +6,8 @@ require_relative('../ladders')
 
 class TestLadders < MiniTest::Test
   def setup
-    @player1 = Player.new("Ewen", 7)
+    
+    @player1 = Player.new("Ewen", 7, @die)
     @ladder1 = Ladders.new(7, 29)
     @ladder2 = Ladders.new(15, 64)
     @ladder3 = Ladders.new(32, 52)
@@ -16,7 +17,11 @@ class TestLadders < MiniTest::Test
 
 
   def test_climb
-    assert_equal(@player1.climb(@ladder1), player1.finish_position = 29)
+    puts @player1.position
+
+    assert_equal( @ladders.climb(@ladder1, @player1), @player1.position)
+
+    puts @player1.position
   end
 end
 

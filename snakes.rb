@@ -4,13 +4,13 @@ class Snakes
 
   def initialize (start, finish)
     @start = start
-    @end = finish
+    @finish = finish
   end
 
 
-  def slide(snake)
-    if @player.postion == @snake.start
-    return @player.postion = @snake.finish
+  def slide(snake, player)
+    if player.position == snake.start
+    return player.position = snake.finish
     else return
     end
   end
